@@ -1,9 +1,25 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta chaeset="utf-8">
-    <title>テスト</title>
-  </head>
-  <body>
-    <h1>テスト</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>四字で紡ぐ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div id="canvas"></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="script.js"></script>
+
+
+
+  <script>
+    function toggleOverlay() {
+      var overlay = document.getElementById("overlay");
+      overlay.style.display = overlay.style.display === "none" ? "flex" : "none";
+    }
+  </script>
+</body>
 </html>
