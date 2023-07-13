@@ -1,10 +1,5 @@
 let currentScreen = 0;
-//let insultText = "不遇之誉";
 let maxInsultText = 50;
-//let insultSize = 16;
-//let insultColors = ["#000000", "#808080"]; // 黒とグレーのカラーコード
-//let insults = [];
-//let encouragementText = "勇往邁進";
 let encouragementCount = 0;
 let maxEncouragementCount = 10;
 let timer = 0;
@@ -64,42 +59,6 @@ function drawScreen0() {
   text("山本晴菜",width*0.5,height*0.55);
 }
 
-
-/*function drawScreen1() {
-  
-  
-  textAlign(LEFT, CENTER);
-  textSize(16);
-  
-  
-  
-  text("夢幻泡影", width*0.3, height / 2);
-  textAlign(LEFT, CENTER);
-  textSize(16);
-  //fill(0);
- 
-
-  //text("幻想の舞台の上で", width * 0.6, height / 2 - 100);
-  //text("人々は翳る影。", width * 0.6, height / 2 - 50);
-  //text("彼方に広がる夢の光は", width * 0.6, height / 2);
-  text("泡沫のように消えては現れる。", width * 0.6, height / 2 + 50);
-
-  if (mouseX > width*0.6&&mouseX<width*0.7  ) {
-    fill(255, 0, 0); // ホバー時のテキストの色（赤）を設定
-  } else {
-    fill(0); // ホバーしていない時のテキストの色（黒）を設定
-  }
-  text("嚆矢", width * 0.6+63, height / 2 - 100);
-  text("濫", width * 0.6+15, height / 2 - 50);
-  text("觴", width * 0.6, height / 2 );
-
-
-  fill(0)
-  text("放たれた　　の如く", width * 0.6, height / 2 - 100);
-  text("氾   の海の真ん中で", width * 0.6, height / 2 - 50);
-  text("   に注がれていく始まりは", width * 0.6, height / 2);
-
-}*/
 let texts = [];
 function drawScreen1(){
   for (let i = 0; i < texts.length; i++) {
@@ -231,18 +190,6 @@ function drawScreen2() {
     text(phrase[i], 0, 0);
     pop();
   }
-
-  /*if (encouragementCount < maxEncouragementCount) {
-    if (millis() - timer >= interval) {
-      encouragementCount++;
-      timer = millis();
-    }
-  }
-
-  for (let i = 1; i <= encouragementCount; i++) {
-    let y = height * (i / (maxEncouragementCount + 1));
-    text(encouragementText, width*0.3, y);
-  }*/
 }
 
 function drawScreen3() {
