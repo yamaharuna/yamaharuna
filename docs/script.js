@@ -17,6 +17,11 @@ const petalSize = 100;
 let targetX; // テキストの目標X座標
 let targetY; // テキストの目標Y座標
 
+let fadeAlpha = 0;
+let fadeSpeed = 2;
+let animationComplete = false;
+
+
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
@@ -24,7 +29,6 @@ function setup() {
   
   textAlign(CENTER, CENTER);
   //textSize(encouragementSize);
-  
   targetX = width*0.3; // 目標X座標を画面の中心に設定
   targetY = height / 2; // 目標Y座標を画面の中心に設定
   //initializeTexts();
@@ -203,9 +207,9 @@ function drawScreen2() {
 
   fill(0)
   text("心に   む夢の宿る場所へ", width * 0.6, height / 2 - 100);
-  text("一歩一歩   く、未知への旅路。", width * 0.6, height / 2 - 50);
+  text("どんどん   く、未知への旅路。", width * 0.6, height / 2 - 50);
   text("   者の鼓動を響き渡らせながら", width * 0.6, height / 2);
-  text("一歩一歩    む、わたしの旅路。", width * 0.6, height / 2+50);
+  text("どんどん    む、わたしの旅路。", width * 0.6, height / 2+50);
 
   // 勇往邁進のアート
   let phrase = "勇往邁進";
@@ -243,7 +247,7 @@ function drawScreen2() {
 
 function drawScreen3() {
 
-  text("波が押し寄せる", width * 0.48, height*0.55 - 100);
+  text("波が押し寄せる。", width * 0.48, height*0.55 - 100);
   text("目指す光が遠く見えない時も", width * 0.46, height*0.55 - 50);
   //text("一歩、一歩進んでゆく姿", width * 0.6, height / 2);
   //text("時には退きながら", width * 0.6, height / 2 + 50);
@@ -262,7 +266,7 @@ function drawScreen3() {
 
   fill(0)
   
-  text("　歩、 歩　んでゆく姿", width * 0.46, height*0.55);
+  text("　歩、 歩　んでゆく姿。", width * 0.46, height*0.55);
   text("時には　 きながら", width * 0.48, height*0.55+50);
 
 
@@ -376,9 +380,34 @@ function drawScreen3() {
   }
   function drawScreen6() {
   
-    text("-- 有終完美 --", width/2, height / 2);
+    //text("-- 有終完美 --", width/2, height / 2);
     textAlign(CENTER, CENTER);
-    textSize(20);
+    textSize(25);
+
+  if (!animationComplete) {
+    fill(0, fadeAlpha);
+    text("-- 有終完美 --", width * 0.5, height * 0.5);
+
+    if (fadeAlpha < 255) {
+      fadeAlpha += fadeSpeed;
+    } else {
+      fadeAlpha = 255;
+      animationComplete = true;
+    }
+  } else {
+    fill(0, fadeAlpha);
+    text("有終完美", width * 0.5, height * 0.5);
+
+    if (fadeAlpha > 0) {
+      fadeAlpha -= fadeSpeed;
+    } else {
+      fadeAlpha = 0;
+      animationComplete = false;
+    }
+  }
+
+
+
   }
   
 
