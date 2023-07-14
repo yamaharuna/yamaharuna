@@ -206,9 +206,9 @@ function drawScreen3() {
   }
   
   text("一", width * 0.46, height*0.55);
-  text("一", width * 0.46+40, height*0.55);
-  text("進", width * 0.46+68, height*0.55 );
-  text("退", width * 0.48+50, height*0.55 +50);
+  text("一", width * 0.46+35, height*0.55);
+  text("進", width * 0.46+69, height*0.55 );
+  text("退", width * 0.48+51, height*0.55 +50);
 
 
   fill(0)
