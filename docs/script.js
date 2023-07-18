@@ -67,7 +67,7 @@ function drawScreen1(){
     textSize(16);
     textAlign(LEFT, CENTER);
     if (mouseX > width*0.6&&mouseX<width*0.7  ) {
-      fill(255, 0, 0); // ホバー時のテキストの色（赤）を設定
+      fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
     } else {
       fill(0); // ホバーしていない時のテキストの色（黒）を設定
     }
@@ -154,7 +154,7 @@ function drawScreen2() {
   //text("一歩一歩進む、わたしの旅路", width * 0.6, height / 2 + 50);
 
   if (mouseX > width*0.6&&mouseX<width*0.7 ) {
-    fill(255, 0, 0); // ホバー時のテキストの色（赤）を設定
+    fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
   } else {
     fill(0); // ホバーしていない時のテキストの色（黒）を設定
   }
@@ -200,7 +200,7 @@ function drawScreen3() {
   //text("時には退きながら", width * 0.6, height / 2 + 50);
 
   if (mouseX > width*0.4&&mouseX<width*0.6 ) {
-    fill(255, 0, 0); // ホバー時のテキストの色（赤）を設定
+    fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
   } else {
     fill(0); // ホバーしていない時のテキストの色（黒）を設定
   }
@@ -238,7 +238,7 @@ function drawScreen3() {
     //text("協奏の調べを奏でる。", width * 0.6, height / 2 + 50);
 
     if (mouseX > width*0.6&&mouseX<width*0.7 ) {
-      fill(255, 0, 0); // ホバー時のテキストの色（赤）を設定
+      fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
     } else {
       fill(0); // ホバーしていない時のテキストの色（黒）を設定
     }
@@ -271,6 +271,7 @@ function drawScreen3() {
     for (let i = 0; i < 7; i++) {
       let x = width * 0.2 + i * 50; // テキストの横位置を計算する
       let y = height * 0.3; // テキストの縦位置
+     
       
       push(); // 現在の描画状態を保存
       translate(x, y); // テキストの描画位置を移動
@@ -292,7 +293,7 @@ function drawScreen3() {
     //text("繚乱と舞う風の中で", width * 0.6, height / 2);
     //text("ほっと一息、木陰に身を寄せる。", width * 0.6, height / 2 + 50);
     if (mouseX > width*0.6&&mouseX<width*0.7 ) {
-      fill(255, 0, 0); // ホバー時のテキストの色（赤）を設定
+      fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
     } else {
       fill(0); // ホバーしていない時のテキストの色（黒）を設定
     }
@@ -359,50 +360,18 @@ function drawScreen3() {
   
 
 function handleRightClick() {
-  // 右矢印がクリックされたときの処理を記述する
-  // 例: 何かを実行する
-  if(currentScreen===0){
-    currentScreen = 1;
+  if (currentScreen >= 0 && currentScreen < 6) {
+    currentScreen++;
   }
-  else if (currentScreen === 1) {
-    currentScreen = 2;
-  
-  } else if(currentScreen === 2 ){
-  currentScreen=3;
-  //else if (currentScreen === 2 && insults.length == maxInsultText) {
-    //currentScreen = 3;
-  } else if (currentScreen === 3) {
-    currentScreen = 4;
-  } else if (currentScreen === 4) {
-    currentScreen = 5;
-  } 
-  else if (currentScreen === 5) {
-    currentScreen = 6;
-  } 
 }
+
+
 function handleLeftClick() {
-  // 左矢印がクリックされたときの処理を記述する
-  // 例: 何かを実行する
-  if (currentScreen === 1) {
-    currentScreen = 0;
+  if (currentScreen > 0) {
+    currentScreen--;
   }
-  else if (currentScreen === 2) {
-    currentScreen = 1;
-  } else if (currentScreen === 2 && encouragementCount < maxEncouragementCount&&mouseX > width*0.8) {
-    createInsults();
-  } else if(currentScreen === 3 ){
-  currentScreen=2;
-  //else if (currentScreen === 2 && insults.length == maxInsultText) {
-    //currentScreen = 3;
-  } else if (currentScreen === 4) {
-    currentScreen = 3;
-  } else if (currentScreen === 5) {
-    currentScreen = 4;
-  } 
-  else if (currentScreen === 6) {
-    currentScreen = 5;
-  } 
 }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
