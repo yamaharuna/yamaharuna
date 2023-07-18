@@ -282,32 +282,6 @@ function drawScreen3() {
     text("   情を重ねて、", width * 0.6, height / 2);
     text("   奏の調べを奏でる。", width * 0.6, height / 2+50);
   
-    
-   
-    /*let y = height * 0.3; // 初期のy座標
-  
-    // テキストを5回描画
-    for (let i = 0; i < 9; i++) {
-      
-      text("和衷協同和衷協同和衷協同和衷協同和衷協同", width*0.2, y);
-      y += (height * 0.3 - height * 0.1) / 4; // 行間を計算
-    }
-
-
-
-
-    for (let i = 0; i < 7; i++) {
-      let x = width * 0.2 + i * 50; // テキストの横位置を計算する
-      let y = height * 0.3; // テキストの縦位置
-     
-      
-      push(); // 現在の描画状態を保存
-      translate(x, y); // テキストの描画位置を移動
-      rotate(radians(90)); // テキストを90度回転させる
-      
-      text("和衷協同和衷協同和衷協同和衷協同和衷協同", 0, 0); // 回転させたテキストを表示
-      pop(); // 保存した描画状態に戻す
-    }*/
     let y = height * 0.3; // 初期のy座標
 
 // テキストを5回描画
