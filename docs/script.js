@@ -29,29 +29,6 @@ function setup() {
   
 }
 
-/*function draw() {
-  background(255);
-  if (currentScreen === 0) {
-    document.body.classList.add('screen0');
-    drawScreen0();
-  }
-  else if (currentScreen === 1) {
-    drawScreen1();
-  } else if (currentScreen === 2) {
-    drawScreen2();
-  } else if (currentScreen === 3) {
-    drawScreen3();
-  }
-  else if (currentScreen === 4) {
-    drawScreen4();
-  }
-  else if (currentScreen === 5) {
-    drawScreen5();
-  }
-  else if (currentScreen === 6) {
-    drawScreen6();
-  }
-}*/
 
 function draw() {
   background(255);
