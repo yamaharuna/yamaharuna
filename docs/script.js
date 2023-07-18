@@ -23,15 +23,16 @@ function setup() {
   canvas.parent("canvas");
   
   textAlign(CENTER, CENTER);
-  //textSize(encouragementSize);
+  
   targetX = width*0.3; // 目標X座標を画面の中心に設定
   targetY = height / 2; // 目標Y座標を画面の中心に設定
-  //initializeTexts();
+  
 }
 
-function draw() {
+/*function draw() {
   background(255);
   if (currentScreen === 0) {
+    document.body.classList.add('screen0');
     drawScreen0();
   }
   else if (currentScreen === 1) {
@@ -50,7 +51,47 @@ function draw() {
   else if (currentScreen === 6) {
     drawScreen6();
   }
+}*/
+
+function draw() {
+  background(255);
+
+  if (currentScreen === 0) {
+    document.body.classList.add('screen0');
+    drawScreen0();
+  } else {
+    document.body.classList.remove('screen0');
+  }
+
+  if (currentScreen === 1) {
+    drawScreen1();
+  }
+
+  if (currentScreen === 2) {
+    drawScreen2();
+  }
+
+  if (currentScreen === 3) {
+    drawScreen3();
+  }
+
+  if (currentScreen === 4) {
+    drawScreen4();
+  }
+
+  if (currentScreen === 5) {
+    drawScreen5();
+  } 
+
+  if (currentScreen === 6) {
+    document.body.classList.add('screen6');
+    drawScreen6();
+  } else {
+    document.body.classList.remove('screen6');
+  }
+
 }
+
 function drawScreen0() {
   textAlign(CENTER, CENTER);
   textSize(20);
@@ -148,11 +189,6 @@ function mouseClicked() {
 
 function drawScreen2() {
 
-  //text("心に住む夢の宿る場所へ", width * 0.6, height / 2 - 100);
-  //text("一歩一歩邁く、未知への旅路", width * 0.6, height / 2 - 50);
-  //text("勇者の鼓動を響き渡らせながら", width * 0.6, height / 2);
-  //text("一歩一歩進む、わたしの旅路", width * 0.6, height / 2 + 50);
-
   if (mouseX > width*0.6&&mouseX<width*0.7 ) {
     fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
   } else {
@@ -196,8 +232,7 @@ function drawScreen3() {
 
   text("波が押し寄せる。", width * 0.48, height*0.55 - 100);
   text("目指す光が遠く見えない時も", width * 0.46, height*0.55 - 50);
-  //text("一歩、一歩進んでゆく姿", width * 0.6, height / 2);
-  //text("時には退きながら", width * 0.6, height / 2 + 50);
+  
 
   if (mouseX > width*0.4&&mouseX<width*0.6 ) {
     fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
@@ -229,14 +264,7 @@ function drawScreen3() {
     textAlign(LEFT, CENTER);
     textSize(16);
     fill(0);
-   
   
-    
-    //text("和の音が響く。", width * 0.6, height / 2 - 100);
-    //text("一つの音に　同じ響きはなく", width * 0.6, height / 2 - 50);
-    //text("衷情を重ねて、", width * 0.6, height / 2);
-    //text("協奏の調べを奏でる。", width * 0.6, height / 2 + 50);
-
     if (mouseX > width*0.6&&mouseX<width*0.7 ) {
       fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
     } else {
@@ -288,10 +316,6 @@ function drawScreen3() {
     textSize(16);
     fill(0);
     
-    //text("百人百色の", width * 0.6, height / 2 - 100);
-    //text("淡い色の花びら。", width * 0.6, height / 2 - 50);
-    //text("繚乱と舞う風の中で", width * 0.6, height / 2);
-    //text("ほっと一息、木陰に身を寄せる。", width * 0.6, height / 2 + 50);
     if (mouseX > width*0.6&&mouseX<width*0.7 ) {
       fill(178, 34, 34); // ホバー時のテキストの色（赤）を設定
     } else {
@@ -300,7 +324,7 @@ function drawScreen3() {
     text("百", width * 0.6+30, height / 2 - 50);
     text("花", width * 0.6+80, height / 2 - 50);
     text("繚乱", width * 0.6, height / 2 );
-    //text("進", width * 0.6+70, height / 2 +50);
+    
   
   
     fill(0)
