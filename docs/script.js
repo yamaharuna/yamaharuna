@@ -247,10 +247,10 @@ function drawScreen3() {
     } else {
       fill(0); // ホバーしていない時のテキストの色（黒）を設定
     }
-    text("和", width * 0.6, height / 2 - 100);
+    text("和", width * 0.6-2, height / 2 - 100);
     text("同", width * 0.6+80, height / 2 - 50);
-    text("衷", width * 0.6, height / 2 );
-    text("協", width * 0.6, height / 2 +50);
+    text("衷", width * 0.6-2, height / 2 );
+    text("協", width * 0.6-2, height / 2 +50);
   
   
     fill(0)
