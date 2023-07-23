@@ -32,7 +32,7 @@ function setup() {
 
 function draw() {
   background(255);
-
+  　textFont("BIZ UDMincho");
   if (currentScreen === 0) {
     document.body.classList.add('screen0');
     drawScreen0();
@@ -178,10 +178,10 @@ function drawScreen2() {
 
 
   fill(0)
-  text("心に   む夢の宿る場所へ", width * 0.6, height / 2 - 100);
-  text("どんどん   く、未知への旅路。", width * 0.6, height / 2 - 50);
-  text("   者の鼓動を響き渡らせながら", width * 0.6, height / 2);
-  text("どんどん    む、わたしの旅路。", width * 0.6, height / 2+50);
+  text("心に  む夢の宿る場所へ", width * 0.6, height / 2 - 100);
+  text("どんどん  く、未知への旅路。", width * 0.6, height / 2 - 50);
+  text("  者の鼓動を響き渡らせながら", width * 0.6, height / 2);
+  text("どんどん   む、わたしの旅路。", width * 0.6, height / 2+50);
 
   // 勇往邁進のアート
   let phrase = "勇往邁進";
@@ -219,13 +219,13 @@ function drawScreen3() {
   
   text("一", width * 0.46, height*0.55);
   text("一", width * 0.46+35, height*0.55);
-  text("進", width * 0.46+69, height*0.55 );
+  text("進", width * 0.46+73, height*0.55 );
   text("退", width * 0.48+51, height*0.55 +50);
 
 
   fill(0)
   
-  text("　歩、 歩　んでゆく姿。", width * 0.46, height*0.55);
+  text("　歩、 歩  んでゆく姿。", width * 0.46, height*0.55);
   text("時には　 きながら", width * 0.48, height*0.55+50);
 
 
@@ -247,17 +247,17 @@ function drawScreen3() {
     } else {
       fill(0); // ホバーしていない時のテキストの色（黒）を設定
     }
-    text("和", width * 0.6-2, height / 2 - 100);
+    text("和", width * 0.6, height / 2 - 100);
     text("同", width * 0.6+80, height / 2 - 50);
-    text("衷", width * 0.6-2, height / 2 );
-    text("協", width * 0.6-2, height / 2 +50);
+    text("衷", width * 0.6, height / 2 );
+    text("協", width * 0.6, height / 2 +50);
   
   
     fill(0)
-    text("   の音が響く。", width * 0.6, height / 2 - 100);
+    text("  の音が響く。", width * 0.6, height / 2 - 100);
     text("一つの音に　じ響きはなく", width * 0.6, height / 2 - 50);
-    text("   情を重ねて、", width * 0.6, height / 2);
-    text("   奏の調べを奏でる。", width * 0.6, height / 2+50);
+    text("  情を重ねて、", width * 0.6, height / 2);
+    text("  奏の調べを奏でる。", width * 0.6, height / 2+50);
   
     let y = height * 0.3; // 初期のy座標
 
