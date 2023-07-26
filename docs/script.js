@@ -266,7 +266,6 @@ for (let i = 0; i < 9; i++) {
   let lineHeight = (height * 0.3 - height * 0.1) / 4; // 行間を計算
   text("和衷協同和衷協同和衷協同和衷協同和衷協同", width * 0.2, y + i * lineHeight);
 }
-
 for (let i = 0; i < 7; i++) {
   let x = width * 0.2 + i * 50; // テキストの横位置を計算する
   let textHeight = textWidth("和衷協同和衷協同和衷協同和衷協同和衷協同"); // テキストの高さを計算する
@@ -279,9 +278,8 @@ for (let i = 0; i < 7; i++) {
   text("和衷協同和衷協同和衷協同和衷協同和衷協同", 0, 0); // 回転させたテキストを表示
   pop(); // 保存した描画状態に戻す
 }
+  
 
-    
-    
   }
   function drawScreen5() {
     textAlign(LEFT, CENTER);
