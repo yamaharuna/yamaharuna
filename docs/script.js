@@ -259,17 +259,17 @@ function drawScreen3() {
     text("  情を重ねて、", width * 0.6, height / 2);
     text("  奏の調べを奏でる。", width * 0.6, height / 2+50);
   
-    let y = height * 0.3; // 初期のy座標
+
+  let repeatText = "和衷協同和衷協同和衷協同和衷協同和衷協同";
+  let lineHeight = (textWidth(repeatText) - 16 * 6) / 5 + 16; // 行間を計算
+  let y = height * 0.75 - textWidth(repeatText); // 初期のy座標を固定
 
 // テキストを5回描画
-for (let i = 0; i < 9; i++) {
-  let lineHeight = (height * 0.3 - height * 0.1) / 4; // 行間を計算
-  text("和衷協同和衷協同和衷協同和衷協同和衷協同", width * 0.2, y + i * lineHeight);
+for (let i = 0; i < 6; i++) {
+  text(repeatText, width * 0.2, y + i * lineHeight);
 }
-for (let i = 0; i < 7; i++) {
-  let x = width * 0.2 + i * 50; // テキストの横位置を計算する
-  let textHeight = textWidth("和衷協同和衷協同和衷協同和衷協同和衷協同"); // テキストの高さを計算する
-  let y = height * 0.75 - textHeight; // テキストの縦位置を計算する
+for (let i = 0; i < 6; i++) {
+  let x = width * 0.2 + i * lineHeight; // テキストの横位置を計算する
 
   push(); // 現在の描画状態を保存
   translate(x, y); // テキストの描画位置を移動
